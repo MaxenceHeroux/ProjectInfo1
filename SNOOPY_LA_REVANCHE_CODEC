@@ -1,4 +1,20 @@
-int main(){
-SNOOPY
-return 0;
+#include <stdio.h>
+#include "unistd.h"
+#include "Bibliotheque SNOOPY.h"
+
+main(){
+    int i=0;
+    for(i=0;i<120;i++){
+        sleep(1);
+        if(i<30){
+            int l=0;
+            for(l;l<i;l++){
+                printf(" ");
+            }
+            printf("-\n"); //clear consol
+        }
+
+    }
+
+    return 0;
 }
