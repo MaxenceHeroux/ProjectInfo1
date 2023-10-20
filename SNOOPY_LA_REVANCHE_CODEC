@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "unistd.h"
+#include <stdlib.h> //Bibliothèque pour importer le clear console
+#include "unistd.h" //Bibliothèque pour importer sleep()
 #include "Bibliotheque SNOOPY.h"
 
 main(){
@@ -11,7 +12,8 @@ main(){
             for(l;l<i;l++){
                 printf(" ");
             }
-            printf("-\n"); //clear consol
+            printf("-");
+            system("cls"); //clear console
         }
 
     }
