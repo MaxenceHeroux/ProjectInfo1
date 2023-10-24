@@ -14,7 +14,7 @@ int main(void) {
 }
 
 
-/*
+/*******************************************************************************************************************
 #include "unistd.h" //Bibliothèque pour importer sleep()
 #include "Bibliotheque SNOOPY.h"
 
