@@ -7,11 +7,11 @@
 #define TAILLE_LIGNES 10
 #define TAILLE_COLONNES 20
 
-void Affiche_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
-    for (int l=0; l<TAILLE_LIGNES; l++) {
-        for (int c=0; c<TAILLE_COLONNES; c++) {
+void Affiche_grille(short int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
+    for (short int l=0; l<TAILLE_LIGNES; l++) {
+        for (short int c=0; c<TAILLE_COLONNES; c++) {
             switch (tab_grille[l][c]) { //On teste chaque case du tableau
-                case 0: {
+                case 0: { //Entre guillemets car la valeur (tab_grille[l][c] est de type "char".
                     printf("%c ", 0); //0x0
                     break;
                 }
@@ -28,17 +28,7 @@ void Affiche_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
                     break;
                 }
                 case 4: {
-                    if (l!=0 && l!=9) {
-                        if (c==0) {
-                            printf("%c   ", 15); //0xF
-                        }
-                        else if (c==19){
-                            printf("  %c", 15); //0xF
-                        }
-                    }
-                    else {
-                        printf("%c ", 15);
-                    }
+                    printf("%c ", 15); //0xF
                     break;
                 }
                 case 5: {
@@ -67,23 +57,13 @@ void Affiche_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
     }
 }
 
-void Creation_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) { //Création des contours uniquement pour le moment.
-    for (int i=0; i<TAILLE_LIGNES; i++) {
-        if (i==0 || i==9) { //Ligne de rang 0 et de rang 9 sont des bords (bord supérieur et bord inférieur).
-            for (int j=0; j<TAILLE_COLONNES; j++) {
-                tab_grille[i][j] = 4;
-            }
-        }
-        else {
-            for (int j=0; j<TAILLE_COLONNES; j++) {
-                if (j != 0 && j != 19) { //Inutile pour le moment
-                    tab_grille[i][j] = 0;
-                }
-                else {
-                    tab_grille[i][0] = 4; //Colonne de rang 0 (bord gauche).
-                    tab_grille[i][19] = 4; //Colonne de rang 19 (bord droit).
-                }
-            }
+void Creation_grille(short int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) { //Création des contours uniquement pour le moment.
+    FILE *pgrille_niveau = fopen("..\\niveau.txt", "r");
+    short int element;
+    for (int i = 0; i < TAILLE_LIGNES; i++) {
+        for (int j = 0; j < TAILLE_COLONNES; j++) {
+            fscanf(pgrille_niveau, "%hi", &element); //%hi pour les "short int".
+            tab_grille[i][j] = element;
         }
     }
 }
