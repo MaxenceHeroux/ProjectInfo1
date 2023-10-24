@@ -20,7 +20,7 @@ void Affiche_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
                     break;
                 }
                 case 2: {
-                    printf("%c ", 22); //1x6
+                    printf("%c ", 26); //1x6
                     break;
                 }
                 case 3: {
@@ -46,7 +46,7 @@ void Affiche_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
                     break;
                 }
                case 6: {
-                    printf("%c ", 26); //1xA
+                    printf("%c ", 22); //1xA
                     break;
                }
                 case 7: {
