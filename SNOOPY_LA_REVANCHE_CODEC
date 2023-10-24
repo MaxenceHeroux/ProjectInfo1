@@ -1,5 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h> //Bibliothèque pour importer le clear console
+#include "grille.h"
+#include "save.h"
+
+#define TAILLE_LIGNES 10
+#define TAILLE_COLONNES 20
+
+int main(void) {
+    int grille[TAILLE_LIGNES][TAILLE_COLONNES] = {0}; //Initialisation d'un tableau 2D (matrice) de 10 par 20, composée de 0.
+    Creation_grille(grille); //On crée la grille de jeu en modifiant en conséquence le tableau "grille"
+    Affiche_grille(grille); //On affiche le tableau "grille"
+    Sauvegarde(grille); //On sauvegarde la grille dans un fichier texte, (sauvegarde RAM vers ROM).
+    return 0;
+}
+
+
+/*
 #include "unistd.h" //Bibliothèque pour importer sleep()
 #include "Bibliotheque SNOOPY.h"
 
@@ -18,5 +33,6 @@ main(){
 
     }
 
-    return 0; //return 0
+    return 0;
 }
+*/
