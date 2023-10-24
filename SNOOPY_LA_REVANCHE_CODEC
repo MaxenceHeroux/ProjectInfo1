@@ -7,6 +7,7 @@
 
 int main(void) {
     short int grille[TAILLE_LIGNES][TAILLE_COLONNES] = {0}; //Initialisation d'un tableau 2D (matrice) de 10 par 20, composée de 0.
+    //Type "short int" pour n'occupper due 2 octets mémoire au lieu de 4 octets avec un type "int".
     Creation_grille(grille); //On crée la grille de jeu en modifiant en conséquence le tableau "grille"
     Affiche_grille(grille); //On affiche le tableau "grille"
     Sauvegarde(grille); //On sauvegarde la grille dans un fichier texte, (sauvegarde de RAM vers disque dur).
