@@ -11,7 +11,7 @@ void Affiche_grille(short int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
     for (short int l=0; l<TAILLE_LIGNES; l++) {
         for (short int c=0; c<TAILLE_COLONNES; c++) {
             switch (tab_grille[l][c]) { //On teste chaque case du tableau
-                case 0: { //Entre guillemets car la valeur (tab_grille[l][c] est de type "char".
+                case 0: {
                     printf("%c ", 0); //0x0
                     break;
                 }
