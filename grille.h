@@ -9,5 +9,5 @@
 
 #define TAILLE_LIGNES 10
 #define TAILLE_COLONNES 20
-void Creation_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]);
-void Affiche_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]);
+void Creation_grille(short int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]);
+void Affiche_grille(short int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]);
