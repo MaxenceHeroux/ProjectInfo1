@@ -9,4 +9,4 @@
 
 #define TAILLE_LIGNES 10
 #define TAILLE_COLONNES 20
-short int Sauvegarde(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]);
+short int Sauvegarde(short int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]);
