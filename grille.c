@@ -28,7 +28,17 @@ void Affiche_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) {
                     break;
                 }
                 case 4: {
-                    printf("%c ", 15); //0xF
+                    if (l!=0 && l!=9) {
+                        if (c==0) {
+                            printf("%c   ", 15); //0xF
+                        }
+                        else if (c==19){
+                            printf("  %c", 15); //0xF
+                        }
+                    }
+                    else {
+                        printf("%c ", 15);
+                    }
                     break;
                 }
                 case 5: {
@@ -65,9 +75,15 @@ void Creation_grille(int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]) { //Créati
             }
         }
         else {
-            tab_grille[i][0] = 4; //Colonne de rang 0 (bord gauche).
-            tab_grille[i][19] = 4; //Colonne de rang 19 (bord droit).
-
+            for (int j=0; j<TAILLE_COLONNES; j++) {
+                if (j != 0 && j != 19) { //Inutile pour le moment
+                    tab_grille[i][j] = 0;
+                }
+                else {
+                    tab_grille[i][0] = 4; //Colonne de rang 0 (bord gauche).
+                    tab_grille[i][19] = 4; //Colonne de rang 19 (bord droit).
+                }
+            }
         }
     }
 }
