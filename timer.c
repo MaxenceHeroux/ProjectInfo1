@@ -13,9 +13,9 @@ void timer (short int tab_grille[TAILLE_LIGNES][TAILLE_COLONNES]){
     for(short int i=0;i<TAILLE_LIGNES;i++){
         for(short int l=0;l<TAILLE_COLONNES;l++){
             if(tab_grille[i][l]==4){
-                tab_grille[0][i]=8;
+                tab_grille[i][l]=8;
                 sleep(1);
-                tab_grille[0][i]=0;
+                tab_grille[i][l]=0;
                 Fin+=1;
                 if(Fin==120){
                     printf("fin!");
