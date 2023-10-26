@@ -2,7 +2,7 @@
 #include <stdlib.h> //Pour importer le clear console
 #include "grille.h"
 #include "save.h"
-
+#include "menu.h"
 #define TAILLE_LIGNES 10
 #define TAILLE_COLONNES 20
 
